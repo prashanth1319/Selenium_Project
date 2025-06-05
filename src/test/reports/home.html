@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+# Selenium Hybrid Framework
 
-</body>
-</html>
+##Quick Start
+
+This is the skeleton every QA Engineer should master before walking into interviews.
+
+---
+
+### Step-by-Step Framework Guide
+
+**Step 1:** Start with a clear folder structure that separates tests, locators, test data, and utilities.
+**Step 2:** Use a base class to handle setup and teardown, logging, reporting, and browser config.
+**Step 3:** Apply the Page Object Model (POM) to isolate UI logic from test logic so when the UI changes, your tests don't break.
+**Step 4:** Integrate with tools like Allure/Extent Reports, Jenkins, and GitHub Actions for CI/CD.
+**Step 5:** Make the framework data-driven so you can easily run tests across multiple sets of data.
+
+---
+
+### Folder Structure Overview
+
+```plaintext
+base/           - Shared logic like setup and teardown (e.g., TestBase.java)
+pages/          - Page Object classes, one per UI page
+utils/          - Reusable utilities: wait logic, Excel readers, screenshot capture
+resources/
+├── java/      - WebDriver setup, constants, configs
+└── test/      - config.properties, test data, log configs
+tests/          - Test classes structured by features/modules
+reports/        - Extent/Allure test reports
+screenshots/    - Auto-saved screenshots of failed tests
