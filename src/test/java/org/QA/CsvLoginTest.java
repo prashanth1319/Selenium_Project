@@ -65,7 +65,7 @@ public class CsvLoginTest extends Base {
             cart.clickAddCart();
             cart.clickOnCheckout();
 
-            // Checkout
+            // Checkout page
             checkout.fillDetails(firstName, lastName, zip);
             checkout.clickOnContinueCTA();
             ScreenshotUtils.capture(driver, "Order-Details");
